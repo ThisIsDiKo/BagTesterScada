@@ -1,0 +1,15 @@
+farms:
+  - farm 1:
+      name: farm with 160D1
+      scan interval: 1000
+      modbus ip: 192.168.0.12
+      mosbus port: 502
+      lines:
+        - line 1:
+            name: line 1
+            num of bags: 10
+            modbus address: 1
+        - line 2:
+            name: line 2
+            num of bags: 8
+            modbus address: 2

@@ -3,9 +3,9 @@ from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.Qt import QTimer
 
 
-class InfoSquad(QWidget):
+class InfoRect(QWidget):
     def __init__(self):
-        super(InfoSquad, self).__init__()
+        super(InfoRect, self).__init__()
 
         self.id = 0
         self.stringName = 0
@@ -23,8 +23,9 @@ class InfoSquad(QWidget):
         self.vBoxLayout.addWidget(self.lblName, alignment=Qt.AlignCenter)
 
         self.container.setLayout(self.vBoxLayout)
-        self.container.setStyleSheet("background-color:red;border-radius: 10px;")
+        self.container.setStyleSheet("background-color:red;border-radius: 10px;font: bold 14px;")
         self.container.setMaximumSize(200, 200)
+        self.container.setMinimumSize(100, 100)
         self.containerLayout = QVBoxLayout()
         self.containerLayout.addWidget(self.container)
         self.setLayout(self.containerLayout)
@@ -52,6 +53,6 @@ if __name__ == '__main__':
     import sys
     from PyQt5.QtWidgets import QApplication
     app = QApplication(sys.argv)
-    ex = InfoSquad()
+    ex = InfoRect()
     ex.show()
     sys.exit(app.exec_())
